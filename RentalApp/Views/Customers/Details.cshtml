@@ -1,0 +1,39 @@
+﻿@model RentalApp.Models.Customer
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Customer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Name: </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>Date Of Birth: </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Birthdate)
+        </dd>
+        <dt>MembershipType:</dt>
+        <dd>
+            @Html.DisplayFor(model => model.MembershipType.Name)
+        </dd>
+        <dt>Sign Up Fee:$</dt>
+        <dd>
+            @Html.DisplayFor(model => model.MembershipType.SignUpFee)
+        </dd>
+        <dt>IsSubscribedToNewsletter: </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsSubscribedToNewsletter)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
