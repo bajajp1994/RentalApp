@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using RentalApp.Data;
 using RentalApp.Models;
 
+
 namespace RentalApp.Controllers
 {
     public class MoviesController : Controller
